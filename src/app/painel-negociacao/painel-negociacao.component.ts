@@ -9,7 +9,7 @@ import { MessageService } from 'primeng/components/common/messageservice';
 })
 export class PainelNegociacaoComponent implements OnInit {
   
-  oportunidade = {};
+  oportunidade = {descricao:'', nomeProspecto:'', valor: ''};
   oportunidades = [];
 
   constructor(
@@ -31,7 +31,7 @@ export class PainelNegociacaoComponent implements OnInit {
   adicionar() {
     this.oportunidadeService.adicionar(this.oportunidade)
       .subscribe(()=>{
-        this.oportunidade = {};
+        this.oportunidade = {descricao:'', nomeProspecto:'', valor: ''};
         this.consultar();
         this.messageService.add({
           severity: 'success',
