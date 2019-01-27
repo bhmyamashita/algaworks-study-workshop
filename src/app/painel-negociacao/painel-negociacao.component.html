@@ -1,7 +1,7 @@
 <p-panel header="Nova oportunidade">
   <div class="ui-g">
-    <div class="ui-g-2">Descrição</div>
-    <div class="ui-g-10">
+    <div class="ui-g-12">Descrição</div>
+    <div class="ui-g-12">
       <input 
         pInputText 
         type="text" 
@@ -10,8 +10,8 @@
     </div>
   </div>
   <div class="ui-g">
-    <div class="ui-g-2">Prospecto</div>
-    <div class="ui-g-10">
+    <div class="ui-g-12">Prospecto</div>
+    <div class="ui-g-12">
       <input 
         pInputText 
         type="text" 
@@ -20,16 +20,17 @@
     </div>
   </div>
   <div class="ui-g">
-    <div class="ui-g-2">Valor</div>
-    <div class="ui-g-10">
+    <div class="ui-g-12">Valor</div>
+    <div class="ui-g-12">
       <input 
         pInputText 
         type="text" 
         [(ngModel)]="oportunidade.valor"
         class="text-grid">
     </div>
-
-    <div class="ui-g-10 ui-g-offset-2">
+  </div>
+  <div class="ui-g">
+    <div class="ui-g-12 ui-g-offset-2">
       <button pButton type="submit" label="Adicionar"
         (click)="adicionar()"></button>
     </div>
