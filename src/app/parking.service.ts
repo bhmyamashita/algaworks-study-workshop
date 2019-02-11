@@ -6,7 +6,7 @@ import { HttpClient } from '@angular/common/http';
 })
 export class ParkingService {
 
-  apiURL = 'http://localhost:8080/parking';
+  apiURL = 'https://bhmy-parking-api.herokuapp.com/parking';
 
   constructor(private httpClient:HttpClient) { }
 
