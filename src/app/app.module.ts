@@ -12,12 +12,12 @@ import { ToastModule } from 'primeng/toast';
 import { MessageService } from 'primeng/components/common/messageservice';
 
 import { AppComponent } from './app.component';
-import { PainelNegociacaoComponent } from './painel-negociacao/painel-negociacao.component';
+import { ParkingTableComponent } from './parking-table/parking-table.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    PainelNegociacaoComponent
+    ParkingTableComponent
   ],
   imports: [
     BrowserAnimationsModule,

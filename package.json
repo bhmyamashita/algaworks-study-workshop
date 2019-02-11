@@ -1,13 +1,11 @@
 {
-  "name": "comercial-ui",
+  "name": "parking-application",
   "version": "0.0.0",
   "scripts": {
-    "ng": "ng",
     "start": "node server.js",
     "build": "ng build",
-    "test": "ng test",
-    "lint": "ng lint",
-    "e2e": "ng e2e",
+    "install": "npm install --ignore-scripts",
+    "dev": "ng serve",
     "postinstall": "ng build --prod"
   },
   "engines": {
@@ -28,6 +26,7 @@
     "@angular/router": "~7.2.0",
     "core-js": "^2.5.4",
     "express": "^4.16.4",
+    "moment": "^2.24.0",
     "path": "^0.12.7",
     "primeflex": "^1.0.0-rc.1",
     "primeicons": "^1.0.0",

@@ -4,17 +4,17 @@ import { HttpClient } from '@angular/common/http';
 @Injectable({
   providedIn: 'root'
 })
-export class OportunidadeService {
+export class ParkingService {
 
-  apiURL = 'http://192.168.0.104:8080/oportunidades';
+  apiURL = 'http://localhost:8080/parking';
 
   constructor(private httpClient:HttpClient) { }
 
-  listar() {
+  listAll() {
     return this.httpClient.get(this.apiURL);
   }
 
-  adicionar(oportunidade: any) {
-    return this.httpClient.post(this.apiURL, oportunidade);
+  insert(parking: any) {
+    return this.httpClient.post(this.apiURL, parking);
   }
 }

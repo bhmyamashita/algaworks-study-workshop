@@ -1,0 +1,47 @@
+<p-panel header="New parking">
+  <div class="ui-g">
+    <div class="ui-g-12">Car Owner</div>
+    <div class="ui-g-12">
+      <input 
+        pInputText 
+        type="text" 
+        [(ngModel)]="parking.carOwner"
+        class="text-grid">
+    </div>
+  </div>
+  <div class="ui-g">
+    <div class="ui-g-12">Payer</div>
+    <div class="ui-g-12">
+      <input 
+        pInputText 
+        type="text" 
+        [(ngModel)]="parking.payer"
+        class="text-grid">
+    </div>
+  </div>
+  <div class="ui-g">
+    <div class="ui-g-12">
+      <button pButton type="submit" label="New Parking"
+        (click)="addNewParking()"></button>
+    </div>
+  </div>
+</p-panel>
+<br>
+<p-table [value]="parkings">
+  <ng-template pTemplate="header">
+    <tr>
+      <th>Date</th>
+      <th>Car Owner</th>
+      <th>Payer</th>
+    </tr>
+  </ng-template>
+  <ng-template pTemplate="body" let-parking>
+    <tr>
+      <td>{{ parking.date }}</td>
+      <td>{{ parking.carOwner }}</td>
+      <td>{{ parking.payer }}</td>
+    </tr>
+  </ng-template>
+</p-table>
+
+<p-toast></p-toast>
