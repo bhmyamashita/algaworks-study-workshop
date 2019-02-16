@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnChanges } from '@angular/core';
 import { ParkingService } from '../parking.service';
 import { MessageService } from 'primeng/components/common/messageservice';
+import { AppComponent } from '../app.component'
 
 import * as moment from 'moment';
 
@@ -16,7 +17,8 @@ export class ParkingTableComponent implements OnInit {
 
   constructor(
     private parkingService: ParkingService,
-    private messageService: MessageService) { }
+    private messageService: MessageService,
+    private appComponent: AppComponent) { }
 
   ngOnInit() {
     let today = moment().format('DD/MM/YYYY');
@@ -25,14 +27,18 @@ export class ParkingTableComponent implements OnInit {
   }
 
   listAll() {
+    console.log('listAll');
+    this.appComponent.startLoading();
     this.parkingService.listAll()
       .subscribe(response => {
+        this.appComponent.stopLoading();
         this.parkings = <any>response
       }
     );
   }
 
   addNewParking() {
+    this.appComponent.startLoading();
     this.parkingService.insert(this.parking)
       .subscribe(()=>{
         this.parking = {carOwner:'', payer:'', date: moment().format('DD/MM/YYYY')};

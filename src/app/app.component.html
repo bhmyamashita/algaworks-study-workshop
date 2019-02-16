@@ -1,2 +1,5 @@
+<app-parking-table [hidden]="isLoading"></app-parking-table>
 
-<app-parking-table></app-parking-table>
+<div *ngIf="isLoading" class="loader">
+    <p-progressSpinner></p-progressSpinner>
+</div>

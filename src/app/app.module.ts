@@ -6,6 +6,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
 
 import { TableModule } from 'primeng/table';
 import { PanelModule } from 'primeng/panel';
+import { ProgressSpinnerModule } from 'primeng/progressspinner';
 import { InputTextModule } from 'primeng/inputtext';
 import { ButtonModule } from 'primeng/button';
 import { ToastModule } from 'primeng/toast';
@@ -30,6 +31,7 @@ import { ParkingTableComponent } from './parking-table/parking-table.component';
     InputTextModule,
     ButtonModule,
     ToastModule,
+    ProgressSpinnerModule,
   ],
   providers: [
     MessageService,

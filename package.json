@@ -6,6 +6,7 @@
     "build": "ng build",
     "install": "npm install --ignore-scripts",
     "dev": "ng serve",
+    "build-serve":"ng build && ng serve",
     "postinstall": "ng build --prod"
   },
   "engines": {
